@@ -9,13 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+  },
+  "devDependencies": {
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-replace": "^1.0.1"
-  },
-  "devDependencies": {
+    "grunt-replace": "^1.0.1",
     "grunt-run": "^0.8.1"
   }
 }
