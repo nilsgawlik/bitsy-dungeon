@@ -45,7 +45,7 @@ module.exports = function(grunt) {
     },
     watch: {
       all: {
-        files: ['src/**'],
+        files: ['src/**', 'bitsy-hacks/src/**'],
         tasks: ['default'],
         options: {
           spawn: false,
