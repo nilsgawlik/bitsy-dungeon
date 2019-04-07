@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    // build the bitsy hacks
     run: {
       options: {
         cwd: './bitsy-hacks',
@@ -10,31 +11,37 @@ module.exports = function(grunt) {
         exec: 'npm run build',
       }
     },
+    // delete old files in the build directory
     clean: {
       default: {
         src: 'build/'
       },
     },
+    // copy src files and bitsy hacks into the build folder
     copy: {
       default: {
         files: [
           {
             expand: true,
             flatten: true,
-            // cwd: 'src',
-            src: ['src/**', './bitsy-hacks/dist/dungeonHack.js'],
+            // List your hacks here
+            src: ['src/**', './bitsy-hacks/dist/dungeon-hack.js'],
             dest: 'build/',
           }
         ],
       },
     },
+    // inject the hacks into the html file
     replace: {
         default: {
             options: {
                 patterns: [
                     {
                         match: /<\/head>/,
-                        replacement: '<script src=dungeonHack.js></script>\n<\/head>',
+                        // Also add your hacks here
+                        replacement: 
+                          '<script src=dungeon-hack.js></script>\n' + 
+                          '<\/head>',
                     }
                 ]
               },
@@ -43,6 +50,7 @@ module.exports = function(grunt) {
             ]
         }
     },
+    // watch for updates in files and build when a file has changed
     watch: {
       all: {
         files: ['src/**', 'bitsy-hacks/src/**'],
