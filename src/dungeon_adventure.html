@@ -37,7 +37,6 @@ n,o,l,l,l,l,l,l,l,l,l,l,l,l,l,w
 11,0,0,0,m,0,0,0,m,0,0,m,0,0,0,x
 11,m,m,m,m,m,m,m,m,0,0,m,m,m,q,x
 10,z,z,z,z,z,z,z,z,z,z,z,z,z,z,y
-ITM 0 4,3
 ITM 4 8,2
 ITM 5 9,2
 ITM 6 10,2
@@ -412,8 +411,9 @@ SPR a
 01111110
 00011110
 00010001
-NAME hiThere
-POS 2 4,4
+NAME npcBob
+DLG SPR_0
+POS 1 4,3
 
 ITM 0
 00011110
@@ -530,6 +530,16 @@ NAME mapCursor
 
 DLG ITM_0
 You defeat the scary ghost.
+
+DLG SPR_0
+"""
+{sequence
+  - Hello! My name is Joyful Bob, welcome to my dungeon.
+  - Oh I am {wvy}blocking the door{wvy}?
+  - I'm terribly sorry, let me step aside right away...(move "npcBob 0 1")
+  - Yo, no problem, mate.
+}
+"""
 
 VAR a
 42

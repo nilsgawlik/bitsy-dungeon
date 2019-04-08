@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             // List your hacks here
-            src: ['src/**', './bitsy-hacks/dist/dungeon-hack.js'],
+            src: ['src/**', './bitsy-hacks/dist/dungeon-hack.js', './bitsy-hacks/dist/move-sprite.js'],
             dest: 'build/',
           }
         ],
@@ -41,6 +41,7 @@ module.exports = function(grunt) {
                         // Also add your hacks here
                         replacement: 
                           '<script src=dungeon-hack.js></script>\n' + 
+                          '<script src=move-sprite.js></script>\n' + 
                           '<\/head>',
                     }
                 ]
